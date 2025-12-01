@@ -11,8 +11,8 @@ import {
   LinkedInIcon,
 } from '@/components/SocialIcons'
 
-import tingaImage from '@/images/tinga.jpg'
-import barbaraImage from '@/images/barbara.jpg'
+// import tingaImage from '@/images/tinga.jpg'
+// import barbaraImage from '@/images/barbara.jpg'
 import { FaTwitter, FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 
 function SocialLink({ className, href, children, icon: Icon }) {
@@ -77,7 +77,7 @@ export default function About() {
           <div className="lg:pl-20">
             <div className="max-w-xs px-2.5 lg:max-w-none mx-auto">
               <Image
-                src={barbaraImage}
+                src="/images/barbara.jpg"
                 alt="Barbara Chanakira"
                 sizes="(min-width: 1024px) 32rem, 20rem"
                 className="aspect-square rotate-2 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
@@ -140,7 +140,7 @@ export default function About() {
           <div className="lg:pr-20">
             <div className="max-w-xs px-2.5 lg:max-w-none mx-auto">
               <Image
-                src={tingaImage}
+                src="/images/tinga.jpg"
                 alt="Tinga Koloko"
                 sizes="(min-width: 1024px) 32rem, 20rem"
                 className="aspect-square -rotate-1 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"

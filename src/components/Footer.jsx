@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Container } from '@/components/Container'
 import Image from "next/image";
-import avatarImage from '@/images/zamspacelogo.png'
+// import avatarImage from '@/images/zamspacelogo.png'
 
 function NavLink({ href, children }) {
   return (
@@ -26,10 +26,11 @@ export function Footer() {
               <div className="flex items-center gap-3">
                 <NavLink href="/">
                   <Image
-                    src={avatarImage}   // ✅ Put your actual logo file in /public
+                    src="/images/zamspacelogo.png" 
                     alt="ZamSpace Logo"
-                    width={120}       // ✅ Control logo width here
-                    height={40}       // ✅ Control logo height here
+                    
+                    width={120}     
+                    height={40}       
                     className="object-contain"
                     priority
                   />

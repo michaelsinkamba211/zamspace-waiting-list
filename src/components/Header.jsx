@@ -5,7 +5,7 @@ import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import avatarImage from '@/images/zamspacelogo.png'
+// import avatarImage from '@/images/zamspacelogo.png'
 
 
 
@@ -227,8 +227,10 @@ function Avatar({ large = false, className, ...props }) {
       {...props}
     >
       <Image
-        src={avatarImage}
+        src="/images/zamspacelogo.png"
         alt=""
+        width={120}
+        height={40}
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(
           'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',

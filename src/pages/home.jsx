@@ -11,11 +11,11 @@ import { FaTiktok } from "react-icons/fa";
 
 
 
-import image1 from '@/images/photos/image1.jpg'
-import image2 from '@/images/photos/image2.jpg'
-import image3 from '@/images/photos/image5.jpg'
-import image4 from '@/images/photos/image4.jpg'
-import image5 from '@/images/photos/image6.jpg'
+// import image1 from '@/images/photos/image1.jpg'
+// import image2 from '@/images/photos/image2.jpg'
+// import image3 from '@/images/photos/image5.jpg'
+// import image4 from '@/images/photos/image4.jpg'
+// import image5 from '@/images/photos/image6.jpg'
 
 
 import { generateRssFeed } from '@/lib/generateRssFeed'
@@ -44,6 +44,16 @@ function MailIcon(props) {
     </svg>
   )
 }
+
+const images = [
+  '/images/photos/image1.jpg',
+  '/images/photos/image2.jpg',
+  '/images/photos/image3.jpg',
+  '/images/photos/image4.jpg',
+  '/images/photos/image5.jpg',
+]
+
+
 
 function BriefcaseIcon(props) {
   return (
@@ -224,16 +234,17 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {images.map((src, index) => (
           <div
-            key={image.src}
+            key={src}
             className={clsx(
               'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-              rotations[imageIndex % rotations.length]
+              rotations[index % rotations.length]
             )}
           >
             <Image
-              src={image}
+              src={src}
+              fill
               alt=""
               sizes="(min-width: 840px) 20rem, 13rem"
               className="absolute inset-0 h-full w-full object-cover"
@@ -241,6 +252,7 @@ function Photos() {
           </div>
         ))}
       </div>
+
     </div>
   )
 }
